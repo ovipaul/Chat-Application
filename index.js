@@ -12,7 +12,7 @@ var io = socket(server);
 
 io.on("connection",function(socket){
   console.log("socekt connected");
-
+  
 //Emitting message from server to all the clients
   socket.on("chat",function(data){
     io.sockets.emit("chat",data);
